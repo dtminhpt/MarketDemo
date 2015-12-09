@@ -25,12 +25,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Parse.
         Parse.setApplicationId("SahngGltB5txyluRNjWbXLkbGGoFOLZ5BC6yh0ku",
             clientKey: "vM6AnNSTwD2JNWFGvkz6BWzodr1mZmKe2Rb7Yx19")
+        /*Parse.setApplicationId("SahngGltB5txyluRNjWbXLkbGGoFOLZ5BC6yh0ku",
+                 clientKey: "vM6AnNSTwD2JNWFGvkz6BWzodr1mZmKe2Rb7Yx19")*/
+        //self.setupParse()
         
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         
         // ...
+        return true
+    }
+    func setupParse() -> Bool {
+        guard let config = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Config", ofType: "plist")!) else {
+            print("Please set up Parse keys in Config.plist file", terminator: "\n")
+            return false
+        }
+        
+        let applicationId = config["parse_application_id"] as? String
+        let clientKey = config["parse_client_key"] as? String
+        Parse.setApplicationId(applicationId!, clientKey: clientKey!)
         return true
     }
 

@@ -13,7 +13,7 @@ import Parse
 class SignUpViewController: UIViewController {
 
     
-    @IBOutlet weak var fullnameField: UITextField!
+    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTap(sender: AnyObject) {
-        var fullname = self.fullnameField.text
+        
         let username = self.usernameField.text
         let password = self.passwordField.text
         let email = self.emailField.text

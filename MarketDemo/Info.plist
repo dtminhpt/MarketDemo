@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>parse_application_id</key>
+	<string>SahngGltB5txyluRNjWbXLkbGGoFOLZ5BC6yh0ku</string>
+	<key>parse_client_key</key>
+	<string>vM6AnNSTwD2JNWFGvkz6BWzodr1mZmKe2Rb7Yx19</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
