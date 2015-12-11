@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         if (PFUser.currentUser() == nil) {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
-                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") //as! UIViewController
                 self.presentViewController(viewController, animated: true, completion: nil)
             })
         }
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         PFUser.logOut()
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") as! UIViewController
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") //as! UIViewController
             self.presentViewController(viewController, animated: true, completion: nil)
         })
     }
