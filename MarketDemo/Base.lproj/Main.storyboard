@@ -61,6 +61,15 @@
                                     <action selector="onLogoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgf-5t-hYa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYV-Pv-V3B">
+                                <rect key="frame" x="128" y="431" width="65" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <action selector="onLogoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="25G-Da-lIU"/>
+                                    <segue destination="LcN-gr-iFy" kind="modal" id="uhU-IH-z8f"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -72,13 +81,16 @@
                             <constraint firstItem="Rkq-Ta-TvU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="115" id="Ds9-bD-TGJ"/>
                             <constraint firstItem="Rkq-Ta-TvU" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="57" id="I8K-ox-j54"/>
                             <constraint firstAttribute="trailing" secondItem="6aB-jG-0Zs" secondAttribute="trailing" constant="127" id="JRa-ah-yyP"/>
+                            <constraint firstItem="MYV-Pv-V3B" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="137" id="JlF-dD-C0R"/>
                             <constraint firstItem="bIB-cH-EWg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PnL-kp-nPw"/>
                             <constraint firstItem="bIB-cH-EWg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="92" id="ecb-UJ-GTt"/>
                             <constraint firstItem="cxt-hR-Cq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="69" id="g9M-L5-5ug"/>
                             <constraint firstAttribute="trailing" secondItem="bIB-cH-EWg" secondAttribute="trailing" constant="91" id="ksy-5F-fzy"/>
+                            <constraint firstAttribute="trailing" secondItem="MYV-Pv-V3B" secondAttribute="trailing" constant="127" id="ku9-y2-nlf"/>
                             <constraint firstAttribute="trailing" secondItem="cxt-hR-Cq9" secondAttribute="trailing" constant="68" id="mT8-ep-2TI"/>
                             <constraint firstAttribute="trailing" secondItem="Rkq-Ta-TvU" secondAttribute="trailing" constant="115" id="n0J-7p-IFW"/>
                             <constraint firstItem="6aB-jG-0Zs" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="104" id="uwy-qm-zF2"/>
+                            <constraint firstItem="MYV-Pv-V3B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="128" id="yf9-ui-QV4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -88,6 +100,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="191" y="241"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="3Py-mL-Htz">
+            <objects>
+                <viewController id="LcN-gr-iFy" customClass="ProfileViewController" customModule="MarketDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jH7-aQ-ly1"/>
+                        <viewControllerLayoutGuide type="bottom" id="znl-xs-rcj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kMg-M3-ogH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3l-yD-FKx">
+                                <rect key="frame" x="124" y="397" width="73" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.95699767979999995" green="1" blue="0.98984491720000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLoginTap:" destination="fIj-jP-Kvt" eventType="touchUpInside" id="eqa-bZ-Voa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdj-4T-BAk">
+                                <rect key="frame" x="61" y="337" width="198" height="30"/>
+                                <color key="textColor" red="0.47670059970000001" green="0.47670059970000001" blue="0.47670059970000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ivT-ul-pdG">
+                                <rect key="frame" x="61" y="201" width="198" height="30"/>
+                                <color key="textColor" red="0.47670059970000001" green="0.47670059970000001" blue="0.47670059970000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMP-qY-Xyb">
+                                <rect key="frame" x="61" y="247" width="198" height="30"/>
+                                <color key="textColor" red="0.47670059970000001" green="0.47670059970000001" blue="0.47670059970000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atu-8l-ASZ">
+                                <rect key="frame" x="61" y="292" width="198" height="30"/>
+                                <color key="textColor" red="0.47670059970000001" green="0.47670059970000001" blue="0.47670059970000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XhV-Ef-zE1">
+                                <rect key="frame" x="86" y="47" width="149" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zjT-bF-n3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="917"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Q1x-ka-6TI">
@@ -143,12 +213,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-cK-ajD">
-                                <rect key="frame" x="61" y="223" width="198" height="30"/>
-                                <color key="textColor" red="0.4767005997474747" green="0.4767005997474747" blue="0.4767005997474747" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev5-C2-jXQ">
                                 <rect key="frame" x="106" y="365" width="108" height="30"/>
                                 <constraints>
@@ -172,6 +236,12 @@
                                     <segue destination="TTT-nL-1Po" kind="modal" id="MGu-eY-eZc"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-cK-ajD">
+                                <rect key="frame" x="61" y="223" width="198" height="30"/>
+                                <color key="textColor" red="0.4767005997474747" green="0.4767005997474747" blue="0.4767005997474747" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
