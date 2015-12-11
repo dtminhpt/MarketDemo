@@ -11,6 +11,8 @@ import Parse
 
 class SettingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var fullnameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,11 @@ class SettingsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let newUser = PFUser.currentUser()
+        
+        
+        self.fullnameLabel.text = newUser?["fullname"]! as? String
+        
     }
 
     override func didReceiveMemoryWarning() {

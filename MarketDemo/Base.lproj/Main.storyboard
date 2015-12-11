@@ -62,16 +62,8 @@
                                     <action selector="onLogoutTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mgf-5t-hYa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYV-Pv-V3B">
-                                <rect key="frame" x="128" y="421" width="65" height="30"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Profile"/>
-                                <connections>
-                                    <segue destination="LcN-gr-iFy" kind="modal" id="Ja6-6V-r83"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01V-b2-lIp">
-                                <rect key="frame" x="201" y="421" width="65" height="30"/>
+                                <rect key="frame" x="128" y="426" width="65" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
@@ -85,23 +77,20 @@
                             <constraint firstAttribute="trailing" secondItem="lA2-vZ-9AH" secondAttribute="trailing" constant="68" id="5fJ-Gh-sBd"/>
                             <constraint firstItem="6aB-jG-0Zs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="128" id="5qn-gL-nhQ"/>
                             <constraint firstItem="bIB-cH-EWg" firstAttribute="top" secondItem="lA2-vZ-9AH" secondAttribute="bottom" constant="96" id="7Jr-6J-U1r"/>
+                            <constraint firstItem="01V-b2-lIp" firstAttribute="top" secondItem="6aB-jG-0Zs" secondAttribute="bottom" constant="8" id="7ZW-DX-c0v"/>
+                            <constraint firstAttribute="trailing" secondItem="01V-b2-lIp" secondAttribute="trailing" constant="127" id="8VB-PW-se4"/>
                             <constraint firstItem="bIB-cH-EWg" firstAttribute="top" secondItem="cxt-hR-Cq9" secondAttribute="bottom" constant="74" id="8tj-oy-AEt"/>
                             <constraint firstItem="Rkq-Ta-TvU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="115" id="Ds9-bD-TGJ"/>
                             <constraint firstItem="Rkq-Ta-TvU" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="57" id="I8K-ox-j54"/>
                             <constraint firstAttribute="trailing" secondItem="6aB-jG-0Zs" secondAttribute="trailing" constant="127" id="JRa-ah-yyP"/>
-                            <constraint firstItem="MYV-Pv-V3B" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="127" id="JlF-dD-C0R"/>
-                            <constraint firstItem="01V-b2-lIp" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="127" id="Kq4-7J-qkD"/>
                             <constraint firstItem="bIB-cH-EWg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PnL-kp-nPw"/>
-                            <constraint firstItem="01V-b2-lIp" firstAttribute="leading" secondItem="MYV-Pv-V3B" secondAttribute="trailing" constant="8" id="aqe-CF-fFe"/>
+                            <constraint firstItem="01V-b2-lIp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="128" id="U3L-Fa-hDj"/>
                             <constraint firstItem="bIB-cH-EWg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="92" id="ecb-UJ-GTt"/>
                             <constraint firstItem="cxt-hR-Cq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="69" id="g9M-L5-5ug"/>
                             <constraint firstAttribute="trailing" secondItem="bIB-cH-EWg" secondAttribute="trailing" constant="91" id="ksy-5F-fzy"/>
-                            <constraint firstAttribute="trailing" secondItem="MYV-Pv-V3B" secondAttribute="trailing" constant="127" id="ku9-y2-nlf"/>
                             <constraint firstAttribute="trailing" secondItem="cxt-hR-Cq9" secondAttribute="trailing" constant="68" id="mT8-ep-2TI"/>
-                            <constraint firstAttribute="trailing" secondItem="01V-b2-lIp" secondAttribute="trailing" constant="54" id="mVt-uM-foO"/>
                             <constraint firstAttribute="trailing" secondItem="Rkq-Ta-TvU" secondAttribute="trailing" constant="115" id="n0J-7p-IFW"/>
                             <constraint firstItem="6aB-jG-0Zs" firstAttribute="top" secondItem="bIB-cH-EWg" secondAttribute="bottom" constant="94" id="uwy-qm-zF2"/>
-                            <constraint firstItem="MYV-Pv-V3B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="128" id="yf9-ui-QV4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -257,6 +246,9 @@
                             <outlet property="delegate" destination="Z6Y-Uf-WXv" id="G2K-jH-dhm"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="fullnameLabel" destination="5jr-on-blx" id="NkF-Pf-V92"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sg7-RI-K99" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -668,7 +660,4 @@
     <resources>
         <image name="Minhavatar" width="360" height="345"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4Hy-Lf-FNL"/>
-    </inferredMetricsTieBreakers>
 </document>
