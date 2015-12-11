@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
             alert.show()
             
         //} else if count(password) < 8 {
-        } else if password?.characters.count < 8 {
+        } else if password?.characters.count < 1 {
             let alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
             
