@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         let username = self.usernameField.text
         let password = self.passwordField.text
         
+        
         // Validate the text fields
         //if count(username) < 5 {
         if username?.characters.count < 5 {
@@ -41,13 +42,14 @@ class LoginViewController: UIViewController {
             
         //} else if count(password) < 8 {
         } else if password?.characters.count < 1 {
-            let alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Password must be greater than 1 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
             
         } else {
             // Run a spinner to show a task in progress
             let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
+            
             
             // Send a request to login
             PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) -> Void in

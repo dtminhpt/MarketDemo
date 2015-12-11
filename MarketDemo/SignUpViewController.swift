@@ -41,9 +41,9 @@ class SignUpViewController: UIViewController {
         if username?.characters.count < 5 {
             let alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
-        } else if password?.characters.count < 8 {
+        } else if password?.characters.count < 1 {
         //} else if count(password) < 8 {
-            let alert = UIAlertView(title: "Invalid", message: "Password must be greater than 8 characters", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Password must be greater than 1 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else if email?.characters.count < 8 {
         //} else if count(email) < 8 {
@@ -58,7 +58,8 @@ class SignUpViewController: UIViewController {
             let newUser = PFUser()
             
             
-            newUser.username = username
+            //newUser.username = username
+            newUser.username = finalEmail
             newUser.password = password
             newUser.email = finalEmail
             
