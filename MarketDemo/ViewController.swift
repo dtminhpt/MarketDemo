@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) {
+    }
     
     @IBAction func onLogoutTap(sender: AnyObject) {
         // Send a request to log out a user
