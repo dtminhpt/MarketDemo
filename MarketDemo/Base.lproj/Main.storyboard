@@ -117,11 +117,12 @@
                                 <rect key="frame" x="120" y="397" width="81" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Update">
                                     <color key="titleColor" red="0.95699767979999995" green="1" blue="0.98984491720000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onLoginTap:" destination="fIj-jP-Kvt" eventType="touchUpInside" id="eqa-bZ-Voa"/>
+                                    <action selector="onUpdate:" destination="LcN-gr-iFy" eventType="touchUpInside" id="91J-MO-orB"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdj-4T-BAk">
@@ -189,6 +190,12 @@
                             <constraint firstItem="Gq5-Pw-1Xt" firstAttribute="top" secondItem="jH7-aQ-ly1" secondAttribute="bottom" constant="8" id="vf2-Re-9X5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addressField" destination="atu-8l-ASZ" id="5qh-pM-R32"/>
+                        <outlet property="emailField" destination="sdj-4T-BAk" id="WHo-h9-JOn"/>
+                        <outlet property="fullnameField" destination="ivT-ul-pdG" id="uTs-H1-VZY"/>
+                        <outlet property="phoneField" destination="IMP-qY-Xyb" id="oOM-GK-Wdw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjT-bF-n3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="csP-EN-wO0" userLabel="Exit" sceneMemberID="exit"/>

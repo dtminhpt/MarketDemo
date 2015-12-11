@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import Parse
+
 
 class ProfileViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var fullnameField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let newUser = PFUser.currentUser()
+        
+        self.fullnameField.text = newUser?["fullname"]! as? String
+        self.emailField.text = newUser?.email
+        
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +34,8 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onUpdate(sender: AnyObject) {
+    }
 
     /*
     // MARK: - Navigation

@@ -58,8 +58,8 @@ class SignUpViewController: UIViewController {
             let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
             spinner.startAnimating()
             
-            let newUser = PFUser()
-            //let newUser = PFUser.currentUser()!
+            //let newUser = PFUser()
+            let newUser = PFUser.currentUser()!
             
             //newUser.username = username
             
