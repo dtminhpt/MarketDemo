@@ -23,6 +23,8 @@ class ProfileViewController: UIViewController {
         let newUser = PFUser.currentUser()
         
         self.fullnameField.text = newUser?["fullname"]! as? String
+        self.phoneField.text = newUser?["phone"]! as? String
+        self.addressField.text = newUser?["address"] as? String
         self.emailField.text = newUser?.email
         
 
@@ -35,6 +37,62 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func onUpdate(sender: AnyObject) {
+        let fullname = self.fullnameField.text
+        let phone = self.phoneField.text
+        let address = self.addressField.text
+        let email = self.emailField.text
+        let finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        
+        // Validate the text fields
+         if fullname?.characters.count < 5 {
+            let alert = UIAlertView(title: "Invalid", message: "Fullname must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        } else if phone?.characters.count < 1 {
+            let alert = UIAlertView(title: "Invalid", message: "Phone must be greater than 1 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        } else if email?.characters.count < 8 {
+            let alert = UIAlertView(title: "Invalid", message: "Please enter a valid email address", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        } else if address?.characters.count < 1 {
+            let alert = UIAlertView(title: "Invalid", message: "Address must be greater than 1 characters", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        } else {
+            // Run a spinner to show a task in progress
+            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+            spinner.startAnimating()
+            
+            //let newUser = PFUser()
+            let newUser = PFUser.currentUser()!
+            
+            newUser["fullname"] = fullname//fullname is an added column
+            newUser["phone"] = phone //phone is an added column
+            newUser["address"] = address //address is an added column
+            newUser.username = finalEmail
+            newUser.email = finalEmail
+            
+            //newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+            //newUser.saveInBackgroundWithBlock ({
+              //  (succeeded: Bool, error: NSError?) -> Void in
+            newUser.saveInBackgroundWithBlock ({
+                (succeed, error) -> Void in
+
+               // Stop the spinner
+                spinner.stopAnimating()
+                if ((error) != nil) {
+                    let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    
+                } else {
+                    let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Home") //as! UIViewController
+                        self.presentViewController(viewController, animated: true, completion: nil)
+                    })
+                }
+            })
+        }
+
     }
 
     /*

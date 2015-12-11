@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
         //if count(username) < 5 {
         //if username?.characters.count < 5 {
         if fullname?.characters.count < 5 {
-            let alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Fullname must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else if password?.characters.count < 1 {
         //} else if count(password) < 8 {
