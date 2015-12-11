@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SettingsTableViewController: UITableViewController {
 
@@ -36,7 +37,16 @@ class SettingsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 6
     }
-
+    
+    @IBAction func onLogout(sender: AnyObject) {
+        PFUser.logOut()
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Login") //as! UIViewController
+            self.presentViewController(viewController, animated: true, completion: nil)
+        })
+    }
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
