@@ -31,6 +31,7 @@
 		BAF2D01F1C171C57003481DE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF2D01E1C171C57003481DE /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BAF2D0211C171E5A003481DE /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF2D0201C171E5A003481DE /* ResetPasswordViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BAF8EB001C1AA74400DAA3AB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8EAFF1C1AA74400DAA3AB /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BAF8EB041C1ACD7B00DAA3AB /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8EB031C1ACD7B00DAA3AB /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		BAF2D01E1C171C57003481DE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BAF2D0201C171E5A003481DE /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		BAF8EAFF1C1AA74400DAA3AB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		BAF8EB031C1ACD7B00DAA3AB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D3E7FD9EE05A9A032B68D23C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				BAF2D01E1C171C57003481DE /* SignUpViewController.swift */,
 				BAF2D0201C171E5A003481DE /* ResetPasswordViewController.swift */,
 				BAF8EAFF1C1AA74400DAA3AB /* ProfileViewController.swift */,
+				BAF8EB031C1ACD7B00DAA3AB /* SettingsTableViewController.swift */,
 			);
 			path = MarketDemo;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				BAF8EB001C1AA74400DAA3AB /* ProfileViewController.swift in Sources */,
 				BAF2D01D1C16E089003481DE /* LoginViewController.swift in Sources */,
 				BAF2CFF11C1602F0003481DE /* ViewController.swift in Sources */,
+				BAF8EB041C1ACD7B00DAA3AB /* SettingsTableViewController.swift in Sources */,
 				BAF2D0211C171E5A003481DE /* ResetPasswordViewController.swift in Sources */,
 				BAF2D01F1C171C57003481DE /* SignUpViewController.swift in Sources */,
 				BAF2CFEF1C1602F0003481DE /* AppDelegate.swift in Sources */,
