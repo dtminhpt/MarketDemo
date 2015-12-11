@@ -14,7 +14,8 @@ class SignUpViewController: UIViewController {
 
     
     
-    @IBOutlet weak var usernameField: UITextField!
+    
+    @IBOutlet weak var fullnameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     
@@ -31,14 +32,16 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpTap(sender: AnyObject) {
         
-        let username = self.usernameField.text
+        //let username = self.usernameField.text
+        let fullname = self.fullnameField.text
         let password = self.passwordField.text
         let email = self.emailField.text
         let finalEmail = email!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
         // Validate the text fields
         //if count(username) < 5 {
-        if username?.characters.count < 5 {
+        //if username?.characters.count < 5 {
+        if fullname?.characters.count < 5 {
             let alert = UIAlertView(title: "Invalid", message: "Username must be greater than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else if password?.characters.count < 1 {
@@ -56,9 +59,12 @@ class SignUpViewController: UIViewController {
             spinner.startAnimating()
             
             let newUser = PFUser()
-            
+            //let newUser = PFUser.currentUser()!
             
             //newUser.username = username
+            
+            //newUser.fullName = fullname
+            newUser["fullname"] = fullname//fullname is an added column
             newUser.username = finalEmail
             newUser.password = password
             newUser.email = finalEmail

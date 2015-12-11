@@ -306,8 +306,8 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="h6x-Cg-C82" id="o1Z-Av-HSJ"/>
+                        <outlet property="fullnameField" destination="OY5-Ld-24y" id="BGS-18-bBR"/>
                         <outlet property="passwordField" destination="Chd-cJ-zbU" id="Zk2-B2-XCU"/>
-                        <outlet property="usernameField" destination="OY5-Ld-24y" id="De5-6Q-Qmr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4H1-HD-i7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
